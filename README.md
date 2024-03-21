@@ -1,4 +1,4 @@
-# spg30
+# spg30 (Sistema de Ponto Grupo 30)
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
