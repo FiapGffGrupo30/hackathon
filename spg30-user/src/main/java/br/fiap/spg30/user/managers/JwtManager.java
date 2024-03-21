@@ -1,4 +1,4 @@
-package br.fiap.spg30.user;
+package br.fiap.spg30.user.managers;
 
 import io.smallrye.jwt.build.Jwt;
 import jakarta.inject.Singleton;
@@ -6,7 +6,7 @@ import jakarta.inject.Singleton;
 import java.util.Set;
 
 @Singleton
-public class JwtService {
+public class JwtManager {
 
     public String generate(Set<String> roles) {
         return Jwt.issuer("spg30")
