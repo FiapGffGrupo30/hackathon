@@ -1,6 +1,25 @@
-# spg30 (Sistema de Ponto Grupo 30)
+# SPG30 (Sistema de Ponto Grupo 30)
 
-O SPG30 é composto por dois microserviços, um para autenticação do usuário e outro responsável pelo registro, visualização de registros e geração de relatórios. 
+SPG30 é o nosso sistema de registro de ponto de funcionários.
+
+O SPG30 é composto por dois microserviços, um para autenticação do usuário(spg30-user) e outro responsável pelo registro, visualização de registros e geração de relatórios (spg30-backend). 
+
+![Solução](imagens/solucao.png)
+
+Esses dois serviços serão responsáveis por logar o usuário no sistema e por registrar os horários de trabalho. 
+Existem 4 tipos de registros de ponto.
+* Primeira marcação - É o registro de entrada, é o horário em que se inicia a jornada de trabalho.
+* Segunda marcação  - É a saída para o almoço ou no caso dos estagiários é o ponto que registra o final da jornada.
+* Terceira marcação - É a volta do almoço. Para evitar questões trabalhistas é preciso que entre a segunda e a terceira marcação exista um intervalo de pelo menos 1 hora. 
+* Quarta marcação - É a marcação que registra o final da jornada. 
+
+Além de permitir o registro de pontos a aplicação é responsavel pelo acompanhamento dos pontos e pela geração de um relatório de registros de pontos. 
+
+Segue desenho dos processo de solução. 
+
+![Solução](imagens/processo.png)
+
+# Escolha da tecnologia. 
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
