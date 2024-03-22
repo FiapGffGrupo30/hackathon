@@ -1,5 +1,7 @@
 # spg30 (Sistema de Ponto Grupo 30)
 
+O SPG30 é composto por dois microserviços, um para autenticação do usuário e outro responsável pelo registro, visualização de registros e geração de relatórios. 
+
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
