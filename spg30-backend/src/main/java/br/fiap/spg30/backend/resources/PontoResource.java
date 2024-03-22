@@ -1,6 +1,7 @@
 package br.fiap.spg30.backend.resources;
 
 import br.fiap.spg30.backend.entities.Ponto;
+import br.fiap.spg30.backend.manager.PontoManager;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.GET;
@@ -21,15 +22,15 @@ public class PontoResource {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("USER")
     public Response get(Long userId, LocalDate date) {
-        return Response.ok(Ponto.findByUserIdAndData(userId, date)).build();
+        return Response.ok(PontoManager.getByUserIdAndDate(userId, date)).build();
     }
 
     @GET
-    @Path("/{userId}/all")
+    @Path("/{userId}/relatorio/{startDate}/{endDate}")
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("USER")
-    public Response getBetweenDates(Long userId) {
-        return Response.ok(Ponto.findAllByUserId(userId)).build();
+    public Response getRelatorio(Long userId, LocalDate startDate, LocalDate endDate) {
+        return Response.ok(PontoManager.getRelatorio(userId, startDate, endDate)).build();
     }
 
     @POST
