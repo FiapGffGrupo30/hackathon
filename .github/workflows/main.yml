@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'spg30-backend/src/**'
-#      - 'spg30-user/src/**'
+      - 'spg30-user/src/**'
       - '.github/workflows/**'
       - 'pom.xml'
 
