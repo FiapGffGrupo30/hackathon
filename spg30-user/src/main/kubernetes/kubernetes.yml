@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  datasource-password: MUBsWTYzV0JyX3NA
+  datasource-username: cG9zZmlhcGFkbWlu
+kind: Secret
+metadata:
+  name: spg30-user
+  namespace: default
+type: Opaque

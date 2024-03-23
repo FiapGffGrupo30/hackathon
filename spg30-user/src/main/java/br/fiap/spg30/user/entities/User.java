@@ -9,7 +9,6 @@ import io.quarkus.security.jpa.Username;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
 
 @Entity
 @Table(name = "TB_USERS")
@@ -20,7 +19,6 @@ public class User extends PanacheEntity {
     @Column(unique = true)
     public String username;
 
-    @Email
     public String email;
 
     @Password
