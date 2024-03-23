@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-03-22T02:33:45.786Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="qSx5iOOajcEyXcOWbw5f" version="24.0.4" type="device" pages="2">
+<mxfile host="Electron" modified="2024-03-22T02:45:19.065Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="a-a75RbSpNVURX6fMiC9" version="24.0.4" type="device" pages="2">
   <diagram id="3b_jg67ZpI6xmnxmbBKy" name="Mapeamento do processo">
     <mxGraphModel dx="1590" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -61,6 +61,11 @@
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-16" value="Primeira marcação" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="150" y="410" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="d5uuVQYZmgaY2r2cq3Vy-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-20" value="Segunda marcação" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="150" y="510" width="120" height="60" as="geometry" />
         </mxCell>
@@ -75,6 +80,28 @@
         </mxCell>
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-27" value="&lt;h1 style=&quot;text-align: left; margin-top: 0px; font-size: 8px;&quot;&gt;&lt;p&gt;User.&lt;/p&gt;&lt;p&gt;Dia do ponto. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 1.&amp;nbsp;(&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 2. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 3. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 4. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Opcional{&lt;/p&gt;&lt;p&gt;Geolocalização.&lt;/p&gt;&lt;p&gt;Status do Ponto(&lt;/p&gt;&lt;p&gt;OK: 4 Marcações com 1 hora de diferença e 8 horas de trabalho,&lt;/p&gt;&lt;p&gt;HE: &amp;gt; 8 HORAS,&lt;/p&gt;&lt;p&gt;Horas a fazer &amp;lt;8,&lt;/p&gt;&lt;p&gt;MARCAÇÃO ERRADA: &amp;lt;4 MARCAÇÕES&amp;nbsp; REALIZADAS),&lt;/p&gt;&lt;p&gt;Quantidade de horas realizadas,&lt;/p&gt;&lt;p&gt;Quantidade de HE(Hora Extra) realizadas,&lt;/p&gt;&lt;p&gt;Horas pontenciais (QTD DE DIAS * 8 HORAS DIA)&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;p&gt;Atualização da Tabela.&lt;/p&gt;&lt;/h1&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
           <mxGeometry x="600" y="270" width="220" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="mrb1pupbrdIWbYvNUEmo-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="690" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-1" value="Intervalo de 1 hora. Caso seja menor que 1 hora mostrar informação que está batendo o ponto com menos de 1 hora" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="135" y="620" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="mrb1pupbrdIWbYvNUEmo-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-5" value="Terceira marcação" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-7" value="Volta do almoço" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="75" y="720" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mrb1pupbrdIWbYvNUEmo-8" value="Quarta marcação" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="840" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
