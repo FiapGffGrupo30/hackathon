@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "Usuario-03",
-            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest",
+            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user",
             "cpu": 0,
             "portMappings": [
                 {
