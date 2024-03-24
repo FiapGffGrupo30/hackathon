@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-03-24T20:06:31.674Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="RPaRy4V_ClAONh2HZFX-" version="24.0.4" type="device" pages="4">
+<mxfile host="Electron" modified="2024-03-24T20:46:04.161Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="O-NstEI1cK8Ng54ftO5Y" version="24.0.4" type="device" pages="4">
   <diagram id="3b_jg67ZpI6xmnxmbBKy" name="Mapeamento do processo">
     <mxGraphModel dx="1350" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -29,9 +29,6 @@
           <mxGeometry x="425" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="d5uuVQYZmgaY2r2cq3Vy-8" target="d5uuVQYZmgaY2r2cq3Vy-10" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="d5uuVQYZmgaY2r2cq3Vy-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="d5uuVQYZmgaY2r2cq3Vy-8" target="d5uuVQYZmgaY2r2cq3Vy-27" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-8" value="Exibe informações de ponto do usuário" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -78,9 +75,6 @@
         <mxCell id="d5uuVQYZmgaY2r2cq3Vy-26" value="&lt;h1 style=&quot;margin-top: 0px; font-size: 8px;&quot;&gt;&lt;p style=&quot;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="650" y="290" width="250" height="340" as="geometry" />
         </mxCell>
-        <mxCell id="d5uuVQYZmgaY2r2cq3Vy-27" value="&lt;h1 style=&quot;text-align: left; margin-top: 0px; font-size: 8px;&quot;&gt;&lt;p&gt;User.&lt;/p&gt;&lt;p&gt;Dia do ponto. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 1.&amp;nbsp;(&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 2. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 3. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Marcação 4. (&lt;strong&gt;date.&lt;/strong&gt;&amp;nbsp;&lt;strong&gt;today()&lt;/strong&gt;)&lt;/p&gt;&lt;p&gt;Opcional{&lt;/p&gt;&lt;p&gt;Geolocalização.&lt;/p&gt;&lt;p&gt;Status do Ponto(&lt;/p&gt;&lt;p&gt;OK: 4 Marcações com 1 hora de diferença e 8 horas de trabalho,&lt;/p&gt;&lt;p&gt;HE: &amp;gt; 8 HORAS,&lt;/p&gt;&lt;p&gt;Horas a fazer &amp;lt;8,&lt;/p&gt;&lt;p&gt;MARCAÇÃO ERRADA: &amp;lt;4 MARCAÇÕES&amp;nbsp; REALIZADAS),&lt;/p&gt;&lt;p&gt;Quantidade de horas realizadas,&lt;/p&gt;&lt;p&gt;Quantidade de HE(Hora Extra) realizadas,&lt;/p&gt;&lt;p&gt;Horas pontenciais (QTD DE DIAS * 8 HORAS DIA)&lt;/p&gt;&lt;p&gt;}&lt;/p&gt;&lt;p&gt;Atualização da Tabela.&lt;/p&gt;&lt;/h1&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
-          <mxGeometry x="600" y="270" width="220" height="360" as="geometry" />
-        </mxCell>
         <mxCell id="mrb1pupbrdIWbYvNUEmo-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="mrb1pupbrdIWbYvNUEmo-5">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="210" y="690" as="sourcePoint" />
@@ -107,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="sB6iWMZyDaw89qzpXI8f" name="Solução">
-    <mxGraphModel dx="2779" dy="1184" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1621" dy="474" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -125,9 +119,10 @@
         <mxCell id="kHKryYGJ1eDEwGIwIQTW-2" value="&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;/login &lt;/span&gt;&lt;/pre&gt;&lt;pre style=&quot;font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace;&quot;&gt;/register&lt;/pre&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;strokeWidth=0;spacing=0;" vertex="1" parent="kHKryYGJ1eDEwGIwIQTW-1">
           <mxGeometry x="10" y="15" width="80" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="XNdiwgJRybvukaTRh5C2-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XNdiwgJRybvukaTRh5C2-1">
+        <mxCell id="WL5esKh52YA6o6BYPyYp-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-430" y="250" as="targetPoint" />
+            <mxPoint x="-418" y="260" as="targetPoint" />
+            <mxPoint x="-363" y="320" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="XNdiwgJRybvukaTRh5C2-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -157,7 +152,7 @@
         <mxCell id="XNdiwgJRybvukaTRh5C2-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.009;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="XNdiwgJRybvukaTRh5C2-5" target="XNdiwgJRybvukaTRh5C2-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="XNdiwgJRybvukaTRh5C2-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.473;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kHKryYGJ1eDEwGIwIQTW-1" target="XNdiwgJRybvukaTRh5C2-1">
+        <mxCell id="WL5esKh52YA6o6BYPyYp-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.402;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="kHKryYGJ1eDEwGIwIQTW-1" target="XNdiwgJRybvukaTRh5C2-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
