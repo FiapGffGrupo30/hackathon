@@ -40,13 +40,13 @@ public class RelatorioDTO {
         if (pontos.isEmpty()) {
             return relatorio;
         }
-        relatorio.userId = pontos.getFirst().userId;
+      /*   relatorio.userId = pontos.getFirst().userId;
         obterPeriodosRelatorio(pontos, relatorio);
         obterMarcacoes(pontos, relatorio);
         relatorio.duracaoTotal = relatorio.marcacoes.stream()
                 .filter(m -> m.duracao != null)
                 .map(m -> m.duracao)
-                .reduce(Duration.ZERO, Duration::plus);
+                .reduce(Duration.ZERO, Duration::plus); */
         return relatorio;
     }
 
