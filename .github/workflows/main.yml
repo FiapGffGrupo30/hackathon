@@ -49,7 +49,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@62f4f872db3836360b72999f4b87f1ff13310f3a
 
     - name: Build and Push Docker user image to Amazon ECR
-      id: build-spg30-user-image
+      id: build-image
       run: |
         ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY=spg30-user
@@ -94,7 +94,7 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Show image URI
-      run: echo ${{ steps.build-spg30-user-image.outputs.image }}
+      run: echo ${{ steps.build-image.outputs.image }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
@@ -102,12 +102,13 @@ jobs:
       with:
         task-definition: task-definition.json
         container-name: fargate03-user
-        image: ${{ steps.build-spg30-user-image.outputs.image }}
+##        image: ${{ steps.build-image.outputs.image }}
+        image: ${{ steps.build-image.outputs.image }}
     
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: fargate03-test-service-user
+        service: svcspg30
         cluster: fargate03
         wait-for-service-stability: false
