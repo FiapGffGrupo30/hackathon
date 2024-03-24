@@ -76,32 +76,32 @@ jobs:
 
 #    steps:
     
-#    - run: echo ${{needs.build.outputs.output1}}
+    - run: echo ${{needs.build.outputs.output1}}
 
-#    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-#    - name: Configure AWS credentials
-#      uses: aws-actions/configure-aws-credentials@v1
-#      with:
-#        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#        aws-region: ${{ secrets.AWS_REGION }}
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
 
-#    - name: Show image URI
-#      run: echo ${{ steps.build-image.outputs.image }}
+    - name: Show image URI
+      run: echo ${{ steps.build-image.outputs.image }}
 
-#    - name: Fill in the new image ID in the Amazon ECS task definition
-#      id: task-def
-#      uses: aws-actions/amazon-ecs-render-task-definition@v1
-#      with:
-#        task-definition: gff-task-definition.json
-#        container-name: gff-repository-pagamentos
-#        image: ${{ steps.build-image.outputs.image }}
+    - name: Fill in the new image ID in the Amazon ECS task definition
+      id: task-def
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: task-definition.json
+        container-name: fargate-test-user01
+        image: ${{ steps.build-image.outputs.image }}
     
-#    - name: Deploy Amazon ECS task definition
-#      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-#      with:
-#        task-definition: ${{ steps.task-def.outputs.task-definition }}
-#        service: service-pagamentos
-#        cluster: cluster-gff
-#        wait-for-service-stability: true
+    - name: Deploy Amazon ECS task definition
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.task-def.outputs.task-definition }}
+        service: fargate-test-service-user01
+        cluster: fargate-test-cluster
+        wait-for-service-stability: true
