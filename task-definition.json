@@ -6,9 +6,9 @@
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "user",
-                    "containerPort": 8082,
-                    "hostPort": 8082,
+                    "name": "8080-port",
+                    "containerPort": 8080,
+                    "hostPort": 8080,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
