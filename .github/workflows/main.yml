@@ -33,7 +33,8 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
 
     - name: Build with Maven
-      run: mvn clean package -Dmaven.test.skip=true
+      #run: mvn clean package -Dmaven.test.skip=true
+      run: chmod 777 ./mvnw && ./mvnw install && ./mvnw package
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
