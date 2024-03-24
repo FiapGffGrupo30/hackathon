@@ -2,7 +2,7 @@
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:746834987111:task-definition/fargate-test-task-01:1",
     "containerDefinitions": [
         {
-            "name": "fargate-spg30-back",
+            "name": "fargate-test-user01",
             "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/fargate-test01:latest",
             "cpu": 0,
             "portMappings": [
