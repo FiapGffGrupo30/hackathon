@@ -88,13 +88,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: fargate-test-user01
+        container-name: fargate03-user
         image: ${{ steps.build-image.outputs.image }}
     
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: fargate-test-service-user01
-        cluster: fargate-test-cluster
+        service: fargate03-test-service-user
+        cluster: fargate03
         wait-for-service-stability: true
