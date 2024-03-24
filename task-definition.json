@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "fargate03-user",
-            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/fargate03:latest",
+            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest",
             "cpu": 0,
             "portMappings": [
                 {
