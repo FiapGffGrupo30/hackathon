@@ -101,7 +101,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: user-fargate03
+##        container-name: user-fargate03
         image: ${{ steps.build-image.outputs.image }}
 ##        image: 746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest
     
