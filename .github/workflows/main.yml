@@ -61,18 +61,18 @@ jobs:
 
         echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-    - name: Build and Push Docker backend image to Amazon ECR
-      id: build-spg30-backend-image
-      run: |
-        ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY=spg30-backend
-        IMAGE_TAG=latest
+#    - name: Build and Push Docker backend image to Amazon ECR
+#      id: build-spg30-backend-image
+#      run: |
+#        ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
+#        ECR_REPOSITORY=spg30-backend
+#        IMAGE_TAG=latest
 
-        docker build -f spg30-backend/src/main/docker/Dockerfile.jvm -t $ECR_REPOSITORY:$IMAGE_TAG .
-        docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+#        docker build -f spg30-backend/src/main/docker/Dockerfile.jvm -t $ECR_REPOSITORY:$IMAGE_TAG .
+#        docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+#        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-        echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+#        echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 #
 
 #  deploy:
