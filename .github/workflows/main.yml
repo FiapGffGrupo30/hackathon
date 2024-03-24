@@ -101,14 +101,14 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-        container-name: Usuario-03
-##        image: ${{ steps.build-image.outputs.image }}
-        image: 746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest
+        container-name: user-fargate03
+        image: ${{ steps.build-image.outputs.image }}
+##        image: 746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest
     
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: svcspg30
+        service: user-fargate03
         cluster: fargate03
         wait-for-service-stability: false

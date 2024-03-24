@@ -1,13 +1,12 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:746834987111:task-definition/fargate-003:1",
     "containerDefinitions": [
         {
-            "name": "Usuario-03",
+            "name": "user-fargate03",
             "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "8082-porta",
+                    "name": "8082-port",
                     "containerPort": 8082,
                     "hostPort": 8082,
                     "protocol": "tcp",
@@ -24,7 +23,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/fargate-003",
+                    "awslogs-group": "/ecs/user-fargate03",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -33,7 +32,7 @@
             "systemControls": []
         }
     ],
-    "family": "fargate-003",
+    "family": "user-fargate03",
     "executionRoleArn": "arn:aws:iam::746834987111:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "volumes": [],
