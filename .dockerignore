@@ -1,5 +1,9 @@
 *
-!target/*-runner
-!target/*-runner.jar
-!target/lib/*
-!target/quarkus-app/*
+!spg30-user/target/*-runner
+!spg30-user/target/*-runner.jar
+!spg30-user/target/lib/*
+!spg30-user/target/quarkus-app/*
+!spg30-backend/target/*-runner
+!spg30-backend/target/*-runner.jar
+!spg30-backend/target/lib/*
+!spg30-backend/target/quarkus-app/*
