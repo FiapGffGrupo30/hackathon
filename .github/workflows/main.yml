@@ -49,7 +49,7 @@ jobs:
       uses: aws-actions/amazon-ecr-login@62f4f872db3836360b72999f4b87f1ff13310f3a
 
     - name: Build and Push Docker user image to Amazon ECR
-      id: build-image
+      id: build-spg30-user-image
       run: |
         ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY=spg30-user
@@ -61,28 +61,21 @@ jobs:
 
         echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-#    - name: Build and Push Docker backend image to Amazon ECR
-#      id: build-spg30-backend-image
-#      run: |
-#        ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
-#        ECR_REPOSITORY=spg30-backend
-#        IMAGE_TAG=latest
+    - name: Build and Push Docker backend image to Amazon ECR
+      id: build-spg30-backend-image
+      run: |
+        ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY=spg30-backend
+        IMAGE_TAG=latest
 
-#        docker build -f spg30-backend/src/main/docker/Dockerfile.jvm -t $ECR_REPOSITORY:$IMAGE_TAG .
-#        docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-#        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker build -f spg30-backend/src/main/docker/Dockerfile.jvm -t $ECR_REPOSITORY:$IMAGE_TAG .
+        docker tag $ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-#        echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-#
+        echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-#  deploy:
-#    needs: build
-#    runs-on: ubuntu-latest
-#    environment: production
-
-#    steps:
     
-    - run: echo ${{needs.build.outputs.output1}}
+    - run: echo ${{needs.build-spg30-user-image.outputs}}
 
     - uses: actions/checkout@v2
 
@@ -94,16 +87,15 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Show image URI
-      run: echo ${{ steps.build-image.outputs.image }}
+      run: echo ${{ steps.build-spg30-user-image.outputs.image }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition.json
-##        container-name: user-fargate03
-        image: ${{ steps.build-image.outputs.image }}
-##        image: 746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-user:latest
+        container-name: user-fargate03
+        image: ${{ steps.build-spg30-user-image.outputs.image }}
     
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
