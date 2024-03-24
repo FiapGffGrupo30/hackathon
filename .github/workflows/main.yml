@@ -34,7 +34,15 @@ jobs:
 
     - name: Build with Maven
       #run: mvn clean package -Dmaven.test.skip=true
-      run: chmod 777 ./mvnw && ./mvnw install && ./mvnw package
+      run: |
+        cd spg30-backend
+        chmod 777 ./mvnw && ./mvnw install && ./mvnw package
+        ls -la
+        cd ..
+        cd spg30-user
+        ls -la
+        chmod 777 ./mvnw && ./mvnw install && ./mvnw package
+
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
