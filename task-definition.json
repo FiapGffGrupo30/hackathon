@@ -2,7 +2,7 @@
     "taskDefinitionArn": "arn:aws:ecs:us-east-1:746834987111:task-definition/fargate-test-task-01:1",
     "containerDefinitions": [
         {
-            "name": "fargate-test-user01",
+            "name": "fargate-spg30-back",
             "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/fargate-test01:latest",
             "cpu": 0,
             "portMappings": [
@@ -33,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "fargate-test-task-01",
+    "family": "spg30",
     "executionRoleArn": "arn:aws:iam::746834987111:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
