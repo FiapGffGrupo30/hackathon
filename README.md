@@ -35,3 +35,11 @@ Aqui nós definiremos os conceitos importantes para entender a nossa aplicação
 | Usuário | Pessoa que trabalha e precisa registrar o horário que entra e sai do trabalho |
 | Visualizar registro | Obter informações sobre um usuário em um determinado dia |
 | Gerar relatório | Obter dados  |
+
+# Fase 2 do projeto
+
+Para a fase 2 serão implementadas algumas novas funcionalidades e outras irão sofrer algumas alterações: 
+* Edição de registro - A API responsável pelos registros irá possuir um novo endpoint para permitir a atualização dos dados salvos. 
+* Utilização do cognito para gerenciar os acessos dos usuários. Além disso, haverá a criação de um novo tipo de usuário, o administrador, que poderá visualizar todos os registros de ponto, independente de quem o registrou, além disso, ele poderá extrair um relatório gerencial .
+* No endpoint de relatório, caso voce seja administrador, poderá acessar um relatório consolidado de todos os registros de pontos feitos em uma determinada data. 
+* Será criado um endpoint de notificação respons
