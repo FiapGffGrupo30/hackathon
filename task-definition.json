@@ -1,13 +1,14 @@
 {
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:746834987111:task-definition/teask-to-fargate-02:1",
     "containerDefinitions": [
         {
-            "name": "fargate-test-user01",
-            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/fargate-test01",
+            "name": "test-user-02-fargate",
+            "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/teste02-fargate:latest",
             "cpu": 0,
             "portMappings": [
                 {
                     "name": "8080",
-                    "containerPort": 8080,
+                    "containerPort": 8082,
                     "hostPort": 8080,
                     "protocol": "tcp",
                     "appProtocol": "http"
@@ -23,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/",
+                    "awslogs-group": "/ecs/teask-to-fargate-02",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "spg30",
+    "family": "teask-to-fargate-02",
     "executionRoleArn": "arn:aws:iam::746834987111:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "volumes": [],
@@ -41,7 +42,7 @@
         "FARGATE"
     ],
     "cpu": "1024",
-    "memory": "3072",
+    "memory": "5120",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
