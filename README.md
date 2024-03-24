@@ -93,6 +93,7 @@ Para a fase 2 serão implementadas algumas novas funcionalidades e outras irão 
 * Será criado um endpoint de notificação responsável por lembrar aos funcionários que eles precisam realizar o registro do seu ponto.
 * Para que se possa enviar uma notificação será preciso enviar uma mensagem para uma fila SQS e o serviço de notificação irá ler da fila e mandar um SMS/email informando para o usuário que faltou registrar um ponto. 
 * Alteramos o Fargate para EC2 por ser mais econômico.
+* Adicionamos um API Gateway para gerenciar os endpoints das apis.
 
 Segue abaixo o desenho da solução atualizado:
 
