@@ -97,4 +97,4 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: fargate03-test-service-user
         cluster: fargate03
-        wait-for-service-stability: true
+        wait-for-service-stability: false
