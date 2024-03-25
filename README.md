@@ -102,3 +102,24 @@ Segue abaixo o desenho da solução atualizado:
 Segue novo desenho de infra: 
 
 ![MVP2](imagens/infra2.png)
+
+
+# Execção de projeto
+
+Para executar o projeto após clonar a pastado mesmo, será preciso executar alguns passos.
+
+- 1° O java utilizado para este projeto deve ser a versão 21 para que possa ser executado corretamente.
+
+- 2° Execute o comando abaixo na raiz do projeto:
+
+```bash
+    chmod 777 ./mvnw
+ ```
+- 3° Acesse em cada pasta do projeto '**spg30-user**' e '**spg30-backend**' e execute o comando abaixo:
+```bash
+    ./mvnw quarkus:dev
+```
+- 4° Ao acessar você encontrará diversos endpoints e junto deles o swagger para facilitar a usabilidade do projeto
+- 5° Para facilidade os swagger de cada projeto são:
+Para o serviço **spg30-user** http://localhost:8082/q/swagger-ui/
+Para o serviço **spg30-backend** http://localhost:8081/q/swagger-ui/
