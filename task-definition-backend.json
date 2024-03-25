@@ -1,12 +1,12 @@
 {
     "containerDefinitions": [
         {
-            "name": "fargate-backend",
+            "name": "spg30-backend",
             "image": "746834987111.dkr.ecr.us-east-1.amazonaws.com/spg30-backend:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "8081-fargate-back",
+                    "name": "8081-port",
                     "containerPort": 8081,
                     "hostPort": 8081,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/fargate-backend",
+                    "awslogs-group": "/ecs/back-fargate-03",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -32,7 +32,7 @@
             "systemControls": []
         }
     ],
-    "family": "fargate-backend",
+    "family": "back-fargate-03",
     "executionRoleArn": "arn:aws:iam::746834987111:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "volumes": [],
@@ -40,7 +40,7 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "1024",
+    "cpu": "2048",
     "memory": "5120",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",

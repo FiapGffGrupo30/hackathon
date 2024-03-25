@@ -125,13 +125,13 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: task-definition-backend.json
-        container-name: fargate-backend
+        container-name: spg30-backend
         image: ${{ steps.build-spg30-backend-image.outputs.image }}
     
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def-back.outputs.task-definition }}
-        service: svc-fargate-backend
+        service: fargate-test-service-backend
         cluster: fargate03
         wait-for-service-stability: false
