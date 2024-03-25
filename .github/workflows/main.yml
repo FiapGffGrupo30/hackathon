@@ -93,7 +93,7 @@ jobs:
 
 ##
 
-   - name: Build and Push Docker backend image to Amazon ECR
+    - name: Build and Push Docker backend image to Amazon ECR
       id: build-spg30-backend-image
       run: |
         ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}
@@ -106,7 +106,7 @@ jobs:
 
         echo "image=$ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-  - run: echo ${{needs.build-spg30-backend-image.outputs}}
+    - run: echo ${{needs.build-spg30-backend-image.outputs}}
 
     - uses: actions/checkout@v2
 
