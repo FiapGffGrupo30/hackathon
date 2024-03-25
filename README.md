@@ -104,7 +104,7 @@ Segue novo desenho de infra:
 ![MVP2](imagens/infra2.png)
 
 
-# Execção de projeto
+# Execução de projeto local
 
 Para executar o projeto após clonar a pastado mesmo, será preciso executar alguns passos.
 
